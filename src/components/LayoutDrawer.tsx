@@ -16,7 +16,7 @@ type LayoutDrawerProps = {
  */
 export function LayoutDrawer({drawerWidth}:LayoutDrawerProps) {
 
-    const container = window !== undefined ? () => window.document.body : undefined;
+    const container = typeof window !== 'undefined' ? () => window.document.body : undefined;
     const [mobileOpen, setMobileOpen] = useState(false);
     const router = useRouter();
 
@@ -40,7 +40,7 @@ export function LayoutDrawer({drawerWidth}:LayoutDrawerProps) {
     const drawer = (
         <div>
             <Toolbar>
-                <img src="/logo-nightcafe.jpg" width="32" height="32" style={{marginRight: '1rem'}} />
+                <img src="/logo-nightcafe.jpg" alt="Nerd IQ Logo" width="32" height="32" style={{marginRight: '1rem'}} />
                 <Typography variant="h6" noWrap component="div">
                     Nerd IQ HQ
                 </Typography>

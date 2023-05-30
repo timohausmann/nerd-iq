@@ -126,7 +126,7 @@ export const QuestionEditor = ({ question, onSave }:QuestionEditorType) => {
 
                 {/* ANSWER INPUTS */}
                 {editedQuestion.answers.map((answer, i) => (
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} md={6} key={answer.id}>
                         <Card sx={{ p: 2 }}>
                             
                             <Typography gutterBottom>{`Antwort ${convertNumberToLetter(i)}`}</Typography>
