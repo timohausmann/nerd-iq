@@ -8,25 +8,25 @@ type TestPageProps = {
 
 export const getServerSideProps: GetServerSideProps<TestPageProps> = async () => {
 
+    return { props: { title: 'Test', body: 'Hello World' } };
+    /*
     const num = Math.floor(Math.random()*100);
-
     const res = await fetch(
         `https://jsonplaceholder.typicode.com/posts/${num}`, 
     );
     const { title, body } = await res.json();
-
     return { props: { title, body } };
+    */
   };
 
 export default function TestPage({ title, body }: TestPageProps) {
-// export default function TestPage() {
-
   return (
     <div>
       <h1>{title}</h1>
       <p>{body}</p>
     </div>
   )
+
 /*
   return (
     <Grid container spacing={2}>
